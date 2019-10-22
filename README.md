@@ -4,4 +4,4 @@
 
 # Lien Test Validation https://docs.google.com/document/d/1YYDiyPCJmewlt0URI16XEenz9dP41VxJZz-_bR-xZrU/edit?usp=sharing 
 
-# Lien Diapo https://docs.google.com/presentation/d/1hEW6kSkrt0haFs4AA5QUE4VQiAfuugMQjzlo2ygRgqM/edit#slide=id.p1
+# Lien Diapo MAJ 22/10 https://docs.google.com/presentation/d/1xQR_t8yLLDJXUZi4jscgezcEGqyzqdKblfXBrL68W3U/edit?usp=sharing
