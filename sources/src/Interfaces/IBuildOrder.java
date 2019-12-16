@@ -3,6 +3,11 @@
  */
 package Interfaces;
 
+import java.util.HashMap;
+
+import construction.Entite;
+import simulation.BuildOrder;
+
 /** 
  * <!-- begin-UML-doc -->
  * <!-- end-UML-doc -->
@@ -13,24 +18,17 @@ public interface IBuildOrder {
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
-	* @param objectif
+	* @param HashMapEntiteIntegerh
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public void generer_BO(IObjectif objectif);
+	public void addBuildOrder(HashMap<Entite, Integer> ent);
 
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public void calculTemps();
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void afficher_BO();
+	public void afficherBO();
 
 	/** 
 	* <!-- begin-UML-doc -->
@@ -38,20 +36,5 @@ public interface IBuildOrder {
 	* @param bo
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public void estRealisable(IBuildOrder bo);
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @param bo
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void saisieBo(IBuildOrder bo);
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void enregistrementBo();
+	public IBuildOrder optimiserBo(IBuildOrder bo);
 }

@@ -1,14 +1,16 @@
 package factory;
 
+import java.util.HashMap;
+
 import Interfaces.IBuildOrder;
 import Interfaces.IObjectif;
-import bo.BuildOrder;
-import objectif.GestObjectif;
+import simulation.BuildOrder;
+import simulation.Objectif;
 
 public class Facto {
 
 	public static IObjectif createObjectif() {
-		return new GestObjectif();
+		return new Objectif(10, 10, new HashMap<>());
 	}
 
 	public static IBuildOrder createBO() {

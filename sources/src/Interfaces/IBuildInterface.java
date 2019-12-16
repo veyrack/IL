@@ -1,72 +1,64 @@
-/**
- * 
- */
-package jeu;
+package Interfaces;
 
-import bo.EtatJeu;
-import entite.Etat;
-import bo.Action;
-import bo.Objectif;
+public interface IBuildInterface {
 
-/** 
-* <!-- begin-UML-doc -->
-* <!-- end-UML-doc -->
-* @author 3520096
-* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-*/
-public class Entite {
+	/** 
+	* <!-- begin-UML-doc -->
+	* <!-- end-UML-doc -->
+	* @param objectif
+	* @return
+	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
+	*/
+	public IBuildOrder generer_BO(IObjectif objectif);
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Integer cout;
+	public boolean estRealisable();
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
+	* @param bo
+	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Integer tpsCstr;
+	public IBuildOrder soumettreBo(IBuildOrder bo);
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
+	* @param obj
+	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Integer dureeMobilisation;
+	public Boolean setObjectif(IObjectif obj);
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
+	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private EtatJeu etatJeu;
+	public IObjectif getObjectif();
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
+	* @param strat
+	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Etat etat;
+	public Boolean setStrategy(IStrategy strat);
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
+	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Action action;
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	private Entite est_requis;
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	private Entite[] prerequis = null;
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	private Objectif objectif;
+	public IStrategy getStrategy();
+
 }

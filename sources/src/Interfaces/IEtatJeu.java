@@ -1,15 +1,33 @@
-/**
- * 
- */
 package Interfaces;
 
-/** 
- * <!-- begin-UML-doc -->
- * <!-- end-UML-doc -->
- * @author 3520096
- * @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
- */
+import java.util.HashMap;
+
+import construction.Entite;
+import construction.Prerequis;
+
 public interface IEtatJeu {
+	public int getOr();
+
+	/** 
+	* <!-- begin-UML-doc -->
+	* <!-- end-UML-doc -->
+	* @return
+	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
+	*/
+	public Integer getNourriture();
+
+	public String getVersion();
+
+	public HashMap<Entite, Integer> getHashMap();
+
+	/** 
+	* <!-- begin-UML-doc -->
+	* <!-- end-UML-doc -->
+	* @param IEntitee
+	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
+	*/
+	public void addInstance(Object IEntitee);
+
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -17,7 +35,7 @@ public interface IEtatJeu {
 	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public boolean setVersion(Integer v);
+	public Boolean setVersion(String v);
 
 	/** 
 	* <!-- begin-UML-doc -->
@@ -26,24 +44,16 @@ public interface IEtatJeu {
 	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public boolean setPieceOr(Integer po);
+	public Boolean setPO(Integer po);
 
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
-	* @param food
+	* @param n
 	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public boolean setNourriture(Integer food);
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @param entite
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void addEntite(IEntite entite);
+	public Boolean setNourriture(Integer n);
 
 	/** 
 	* <!-- begin-UML-doc -->
@@ -56,44 +66,24 @@ public interface IEtatJeu {
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
-	* @return
+	* @param unit
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public IEntite getEntites();
+	public void isDispo(String unit);
 
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
-	* @param entite
-	* @param nb
-	* @return
+	* @param unit
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public boolean isPresent(String entite, Integer nb);
+	public void isPresent(String unit);
 
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
-	* @param entite
-	* @return
 	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public boolean isDisponible(String entite);
+	public void incrementeTime();
 
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @return
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public IEtatJeu getEtatJeu();
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @param entite
-	* @return
-	* @generated "UML vers Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public Integer nbEntite(String entite);
 }
